@@ -4,7 +4,17 @@ A Flutter package for creating beautiful orbital animations with multiple rings 
 [![pub package](https://img.shields.io/pub/v/revolve.svg)](https://pub.dev/packages/revolve)
 [![License](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
 
+
+
+https://github.com/user-attachments/assets/9fd08f69-d28f-4b44-93e8-51a052c9a039
+
+
+
+
+
 #### Web demo is available [here](https://elaborate-praline-37948f.netlify.app/)
+
+
 ## Getting started
 
 Add `revolve` to your `pubspec.yaml`:
