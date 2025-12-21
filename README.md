@@ -1,6 +1,7 @@
 # Revolve
 
 A Flutter package for creating beautiful orbital animations with multiple rings and children that revolve indefinitely around a center point.
+
 [![pub package](https://img.shields.io/pub/v/revolve.svg)](https://pub.dev/packages/revolve)
 [![License](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
 
