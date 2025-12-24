@@ -11,7 +11,7 @@ class _OrbitPathPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     final center = Offset(size.width / 2, size.height / 2);
     final paint = Paint()
-      ..color = decoration.color!.withValues(alpha: decoration.opacity)
+      ..color = decoration.color.withValues(alpha: decoration.opacity)
       ..strokeWidth = decoration.width
       ..style = PaintingStyle.stroke;
 

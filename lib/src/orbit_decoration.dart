@@ -4,15 +4,15 @@ part of '../revolve.dart';
 class OrbitDecoration {
   /// Creates an orbit decoration configuration
   const OrbitDecoration({
-    this.color,
+    this.color = Colors.grey,
     this.width = 1.0,
     this.style = OrbitStyle.solid,
     this.dashPattern,
     this.opacity = 1.0,
   });
 
-  /// Color of the orbit line. If null, no orbit is drawn
-  final Color? color;
+  /// Color of the orbit line. defaults to grey.
+  final Color color;
 
   /// Width of the orbit line
   final double width;

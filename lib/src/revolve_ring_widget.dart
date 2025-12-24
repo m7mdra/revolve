@@ -76,14 +76,12 @@ class _RevolveRingWidgetState extends State<_RevolveRingWidget>
             return Stack(
               clipBehavior: Clip.none,
               children: [
-                if (_ring.decoration != null &&
-                    _ring.decoration!.color != null &&
-                    _ring.decoration!.style != OrbitStyle.none)
+
                   CustomPaint(
                     size: Size(size, size),
                     painter: _OrbitPathPainter(
                       radius: _ring.radius,
-                      decoration: _ring.decoration!,
+                      decoration: _ring.decoration,
                     ),
                   ),
                 ..._ring.children.asMap().entries.map((entry) {
@@ -109,6 +107,24 @@ class _RevolveRingWidgetState extends State<_RevolveRingWidget>
           },
         );
       },
+    );
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty<RevolveRing>('ring', widget.ring));
+  }
+
+  @override
+  DiagnosticsNode toDiagnosticsNode({
+    String? name,
+    DiagnosticsTreeStyle? style,
+  }) {
+    return DiagnosticsProperty(
+      name ?? 'RevolveRingWidget',
+      widget.ring,
+      style: style ?? DiagnosticsTreeStyle.singleLine,
     );
   }
 }

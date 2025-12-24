@@ -23,7 +23,7 @@ class RevolveRing {
     this.duration = const Duration(seconds: 10),
     this.direction = RevolveDirection.clockwise,
     this.startAngle = 0,
-    this.decoration,
+    this.decoration = const OrbitDecoration(),
     this.curve = Curves.linear,
   });
 
@@ -33,20 +33,20 @@ class RevolveRing {
   /// Children to orbit on this ring
   final List<RevolveChild> children;
 
-  /// Duration for one complete orbit
+  /// Duration for one complete orbit, default is 10 seconds
   final Duration duration;
 
-  /// curve for the orbit animation
+  /// curve for the orbit animation, default is [Curves.linear]
   final Curve curve;
 
-  /// Direction of rotation
+  /// Direction of rotation, default is [RevolveDirection.clockwise]
   final RevolveDirection direction;
 
   /// Starting angle in radians (0 is right, pi/2 is bottom, etc.)
   final double startAngle;
 
-  /// Visual decoration for the orbit path
-  final OrbitDecoration? decoration;
+  /// Visual decoration for the orbit path, see defaults in [OrbitDecoration]
+  final OrbitDecoration decoration;
 
   RevolveRing copyWith({
     double? radius,
@@ -66,5 +66,10 @@ class RevolveRing {
       decoration: decoration ?? this.decoration,
       curve: curve ?? this.curve,
     );
+  }
+
+  @override
+  String toString() {
+    return 'RevolveRing(radius: $radius, children: $children, duration: $duration, direction: $direction, startAngle: $startAngle, decoration: $decoration, curve: $curve)';
   }
 }
